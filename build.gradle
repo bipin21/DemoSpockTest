@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.7.0'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'groovy'
 }
 
 group = 'com.example'
@@ -15,6 +16,16 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation 'org.codehaus.groovy:groovy-all:3.0.10'
+	// https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all
+	testImplementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.10'
+
+	// https://mvnrepository.com/artifact/org.spockframework/spock-spring
+	testImplementation group: 'org.spockframework', name: 'spock-spring', version: '2.1-groovy-3.0'
+	// https://mvnrepository.com/artifact/org.spockframework/spock-core
+	testImplementation group: 'org.spockframework', name: 'spock-core', version: '2.1-groovy-3.0'
+
 }
 
 tasks.named('test') {
