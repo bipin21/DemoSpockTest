@@ -2,12 +2,13 @@ import spock.lang.Specification
 
 class DummyTest extends Specification{
 
-    def "Dummy test case"(){
+    def "First unit test case for sum"(){
         given:
             def x= 10
+            def y = 5
         when:
-            def multiple = x*x
+            def result = x+y
         then:
-            multiple == 100
+            result == 15
     }
 }
